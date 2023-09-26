@@ -5,7 +5,7 @@ from datetime import datetime
 """
 def function_template():
     try:
-        conn=mc.connect(host='localhost',username='root',password='Tanwar9867@',database='website')
+        conn=mc.connect(host='localhost',username='root',password='your_password',database='website')
         cursor=conn.cursor()
         conn.start_transaction()
         cursor.execute(query)
