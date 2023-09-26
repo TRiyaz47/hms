@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book an Appointment - Your Health Clinic</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Book an Appointment</h1>
+
+        <!-- Step 1: Speciality Selection Form -->
+        <form id="speciality-form">
+            <label for="speciality">Select Speciality:</label>
+            <select id="speciality" name="speciality">
+                <option value="cardiology">Cardiology</option>
+                <option value="orthopedics">Orthopedics</option>
+                <option value="dermatology">Dermatology</option>
+                <!-- Add more specialities as needed -->
+            </select>
+            <button type="submit">Search Doctors</button>
+        </form>
+
+        <!-- Step 2: Available Doctors List -->
+        <div id="doctors-list" style="display: none;">
+            <h2>Available Doctors</h2>
+            <ul id="doctor-list"></ul>
+        </div>
+
+        <!-- Step 3: Doctor Schedule for the Month -->
+        <div id="doctor-schedule" style="display: none;">
+            <h2>Doctor's Schedule for [Month]</h2>
+            <table id="schedule-table">
+                <!-- Populate the schedule table dynamically -->
+            </table>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript code to handle form submission and dynamic content display
+        const specialityForm = document.getElementById("speciality-form");
+        const doctorsList = document.getElementById("doctors-list");
+        const doctorList = document.getElementById("doctor-list");
+        const doctorSchedule = document.getElementById("doctor-schedule");
+        const scheduleTable = document.getElementById("schedule-table");
+
+        specialityForm.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            // Step 1: Handle speciality selection and show available doctors
+            const selectedSpeciality = document.getElementById("speciality").value;
+            
+            // Here, you would make an AJAX request to the server to fetch available doctors
+            // and then populate the doctorList UL element with the results.
+            // For simplicity, let's assume you have a list of doctors in JSON format:
+            const doctorsData = [
+                { name: "Dr. John Doe", id: "doc1" },
+                { name: "Dr. Jane Smith", id: "doc2" },
+                // Add more doctors as needed
+            ];
+
+            doctorList.innerHTML = "";
+            doctorsData.forEach(doctor => {
+                const listItem = document.createElement("li");
+                listItem.textContent = doctor.name;
+                listItem.setAttribute("data-doctor-id", doctor.id);
+                doctorList.appendChild(listItem);
+            });
+
+            doctorsList.style.display = "block";
+        });
+
+        // Step 2: Handle doctor selection and show the schedule for the selected doctor
+        doctorList.addEventListener("click", function (event) {
+            const selectedDoctorId = event.target.getAttribute("data-doctor-id");
+            if (selectedDoctorId) {
+                // Here, you would make another AJAX request to fetch the doctor's schedule
+                // for the selected month and populate the scheduleTable accordingly.
+                // Display the doctor's schedule in the scheduleTable.
+                // Finally, show the doctorSchedule div.
+                doctorSchedule.style.display = "block";
+            }
+        });
+    </script>
+</body>
+</html>

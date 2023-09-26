@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Admin Dashboard - Your Health Clinic</title>
+    <style>/* Reset some default styles */
+        body, h1, form, label, input, ul, li {
+            margin: 0;
+            padding: 0;
+        }
+        
+        /* Apply a background color and font to the entire page */
+        body {
+            font-family: Arial, sans-serif;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+        }
+        
+        nav ul {
+            list-style-type: none;
+            text-align: center;
+        }
+        
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        
+        /* Page Container Styles */
+        .page-container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        
+        /* Dashboard-specific Styles */
+        .dashboard {
+            background-color: #f4f4f4;
+        }
+        
+        .patient {
+            background-color: #f9f9f9;
+        }
+        
+        .doctor {
+            background-color: #f5f5f5;
+        }
+        
+        .hospital-admin {
+            background-color: #eaeaea;
+        }
+        </style>
+</head>
+<body class="dashboard hospital-admin">
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Patients</a></li>
+                <li><a href="#">Doctors</a></li>
+                <li><a href="#">Appointments</a></li>
+                <li><a href="#">Reports</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="/logout">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="page-container">
+        <h1>Welcome, Hospital Admin!</h1>
+        <!-- Add hospital admin-specific content here -->
+    </div>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Dashboard - Your Health Clinic</title>
+    <style>
+        /* Reset some default styles */
+        body, h1, form, label, input, ul, li {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Apply a background color and font to the entire page */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+        }
+
+        nav ul {
+            list-style-type: none;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #007bff; /* Change link color on hover */
+        }
+
+        /* Page Container Styles */
+        .page-container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        /* Dashboard-specific Styles */
+        .dashboard {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Dashboard content */
+        .dashboard-content {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        /* Custom dashboard section */
+        .dashboard-section {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .dashboard-section h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .dashboard-section p {
+            font-size: 16px;
+            color: #333;
+        }
+
+        /* Button styles */
+        .button {
+            display: inline-block;
+            text-decoration: none;
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body class="dashboard patient">
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/pat_dashboard">Dashboard</a></li>
+                <li><a href="/render_pat_appts">Appointments</a></li>
+                <!--
+                <li><a href="#">Medical Records</a></li>
+                <li><a href="#">Prescriptions</a></li>
+                -->
+                <li><a href="#">Profile</a></li>
+                
+                <li><a href="/logout">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="page-container">
+        <h1>Welcome, Patient!</h1>
+        <div class="dashboard">
+            <div class="dashboard-content">
+                <div class="dashboard-section">
+                    <h2>Your Upcoming Appointments</h2>
+                    <p>You have upcoming appointments scheduled with our doctors.</p>
+                </div>
+                <div class="dashboard-section">
+                    <h2>Medical Records</h2>
+                    <p>Access and manage your medical records securely.</p>
+                </div>
+                <div class="dashboard-section">
+                    <h2>Prescriptions</h2>
+                    <p>View and renew your prescriptions as needed.</p>
+                </div>
+                <div class="dashboard-section">
+                    <h2>Your Profile</h2>
+                    <p>Update your profile information and preferences.</p>
+                </div>
+                <div class="dashboard-section">
+                    <h2>Book an Appointment</h2>
+                    <p>Book a new appointment with your preferred doctor.</p>
+                    <a href="/pat_book_appt" class="button">Book Appointment</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

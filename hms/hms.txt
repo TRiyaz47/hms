@@ -1,0 +1,82 @@
+Patient Side:
+Book an appointment
+
+
+
+DB:
+Doctors Table
+-doctor_id
+-doctor_name
+-doctor_gender
+-doctor_speciality
+-doctor_num
+-doctor_degree
+-doctor_age
+
+Patient
+-patient_id auto_assign
+-patient_name
+-patient_disease
+-patient_num
+-patient_gender
+-patient_age
+
+
+Hospital side
+Time Table
+| date | start_time | end_time |doctor_name | doctor_speciality |
+
+appointment_table:
+appointment_id|doctor_id|patient_id|appointment_date|appointment_time
+to show:
+delete
+appointment_id|doctor_name|appointment_date
+show_details:
+
+
+
+
+Patient Side
+home_page->book appointment->login/signup-
+my_appointments-> live  delete
+limit
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CREATE TABLE Doctors (
+    doctor_id INT PRIMARY KEY AUTO_INCREMENT,
+    doctor_name VARCHAR(100),
+    doctor_speciality VARCHAR(100),
+    contact_number VARCHAR(15),
+    email VARCHAR(100),
+    office_address VARCHAR(255)
+);
+
+CREATE TABLE Doctors (
+    doc_id INT PRIMARY KEY AUTO_INCREMENT,
+    doc_name VARCHAR(100),
+    doc_gender VARCHAR(10),
+    doc_speciality VARCHAR(100),
+    doc_cntc_num VARCHAR(20),
+    doc_dob INT
+    doc_email
+);
+
+
+
+
+
+
+
+

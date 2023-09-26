@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Appointments</title>
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+            color: #333;
+        }
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+            color: #333;
+        }
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+        .action-box {
+            text-align: center;
+            margin-top: 20px;
+        }
+        a.button {
+            display: inline-block;
+            text-decoration: none;
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+        a.button:hover {
+            background-color: #0056b3;
+        }
+        .cancel-button {
+            display: inline-block;
+            background-color: #e74c3c;
+            color: #fff;
+            padding: 6px 12px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        /* Navigation bar styles */
+nav {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #007bff; /* Change link color on hover */
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/pat_dashboard">Dashboard</a></li>
+                <li><a href="/render_pat_appts">Appointments</a></li>
+                <!--
+                <li><a href="#">Medical Records</a></li>
+                <li><a href="#">Prescriptions</a></li>
+                -->
+                <li><a href="#">Profile</a></li>
+                
+                <li><a href="/logout">Logout</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+    <h1>Your Appointments</h1>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Appointment ID</th>
+                <th>Doctor ID</th>
+                <th>Patient ID</th>
+                <th>Date/Time</th>
+                <th>Status</th>
+                <th>Notes</th>
+                <th>Action</th> <!-- Added Action column -->
+            </tr>
+        </thead>
+        <tbody>
+            {% for appt in appt_details %}
+            <tr>
+                <td>{{ appt[0] }}</td>
+                <td>{{ appt[1] }}</td>
+                <td>{{ appt[2] }}</td>
+                <td>{{ appt[3] }}</td>
+                <td>{{ appt[4] }}</td>
+                <td>{{ appt[5] }}</td>
+                <td>
+                    <a class="cancel-button" href="#">Cancel</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    
+    <div class="action-box">
+        <a href="/pat_book_appt" class="button">Create New Appointment</a>
+    </div>
+    
+    <!-- Add any other content or links as needed -->
+</body>
+</html>
