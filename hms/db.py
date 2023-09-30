@@ -21,7 +21,7 @@ def function_template():
 """
 def show_pat():#print patient table
     try:
-        conn=mc.connect(host="localhost",username="root",password="Tanwar9867@",database="hms")
+        conn=mc.connect(host="localhost",username="root",password="your_password",database="hms")
         cursor=conn.cursor()
         conn.start_transaction()
 
@@ -43,7 +43,7 @@ def show_pat():#print patient table
  
 def show_appt():
     try:
-        conn=mc.connect(host="localhost",username="root",password="Tanwar9867@",database="hms")
+        conn=mc.connect(host="localhost",username="root",password="your_password",database="hms")
         conn.start_transaction()
         cursor=conn.cursor()
 
@@ -64,7 +64,7 @@ def show_appt():
 def add_pat(pat_details):#add values in patient table
 #0-fname,1-lname,2-gender,3-dob,4-address,5-cntc_number
     try:
-        conn=mc.connect(host='localhost',username='root',password='Tanwar9867@',database='hms')
+        conn=mc.connect(host='localhost',username='root',password='your_password',database='hms')
         cursor=conn.cursor()
         conn.start_transaction()
 
@@ -87,7 +87,7 @@ def add_pat(pat_details):#add values in patient table
 def add_doc(doc_details):#add values in doctor table
 #0-name,1-gender,2-speciality,3-contact_num,4-dob,5-email
     try:
-        conn=mc.connect(host='localhost',username='root',password='Tanwar9867@',database='hms')
+        conn=mc.connect(host='localhost',username='root',password='your_password',database='hms')
         cursor=conn.cursor()
         conn.start_transaction()
 
@@ -110,7 +110,7 @@ def add_doc(doc_details):#add values in doctor table
 def add_appointment(appt_details):
 #0-doc_id,1-pat_id,2-appt_dataetime,3-appt_status,4-appt_notes
     try:
-        conn=mc.connect(host="localhost",username="root",password="Tanwar9867@",database="hms")
+        conn=mc.connect(host="localhost",username="root",password="your_password",database="hms")
         conn.start_transaction
         cursor=conn.cursor()
 
@@ -134,7 +134,7 @@ def add_appointment(appt_details):
 def login_db(cntc_num):
     try:
      
-        conn=mc.connect(host="localhost",username="root",password="Tanwar9867@",database="hms")
+        conn=mc.connect(host="localhost",username="root",password="your_password",database="hms")
         cursor=conn.cursor()
         conn.start_transaction
         if cntc_num=="9321058483":
@@ -180,7 +180,7 @@ def login_db(cntc_num):
 
 def pat_appt_details(pat_id):
     try:
-        conn=mc.connect(host="localhost",user="root",password="Tanwar9867@",database="hms")
+        conn=mc.connect(host="localhost",user="root",password="your_password",database="hms")
         cursor=conn.cursor()
         conn.start_transaction()
 
@@ -214,7 +214,7 @@ def pat_appt_details(pat_id):
 
 def show_doc(condition):#print doctor table
     try:
-        conn=mc.connect(host="localhost",username="root",password="Tanwar9867@",database="hms")
+        conn=mc.connect(host="localhost",username="root",password="your_password",database="hms")
         conn.start_transaction()
         cursor=conn.cursor()
         if condition==None:
@@ -237,7 +237,7 @@ def show_doc(condition):#print doctor table
 
 def show_timetable(condition):
     try:
-        conn=mc.connect(host="localhost",username="root",password="Tanwar9867@",database="hms")
+        conn=mc.connect(host="localhost",username="root",password="your_password",database="hms")
         conn.start_transaction()
         cursor=conn.cursor()
 
